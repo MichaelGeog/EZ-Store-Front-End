@@ -2,6 +2,7 @@ import Logo from "../../components/Logo";
 import SignUp from "./signUpFormFolder/signUp";
 import Login from "./loginFormFolder/login";
 import { useState } from "react";
+import "./authPage.css";
 
 function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -13,12 +14,12 @@ function Auth() {
   return (
     <div className={`main-container ${isSignUp ? "switch" : ""}`}>
       <Logo />
-        {isSignUp ? (
-          <SignUp toggleForm={toggleForm} />
-        ) : (
-          <Login toggleForm={toggleForm} />
-        )}
-      </div>
+      {isSignUp ? (
+        <SignUp toggleForm={toggleForm} />
+      ) : (
+        <Login toggleForm={toggleForm} />
+      )}
+    </div>
   );
 }
 export default Auth;
