@@ -1,6 +1,6 @@
 import Logo from "../../components/Logo";
-import SignUp from "./signUpFormFolder/signUp";
-import Login from "./loginFormFolder/login";
+import SignUpForm from "../../components/signUpForm";
+import LoginForm from "../../components/loginForm";
 import { useState } from "react";
 import "./authPage.css";
 
@@ -15,9 +15,9 @@ function Auth() {
     <div className={`main-container ${isSignUp ? "switch" : ""}`}>
       <Logo />
       {isSignUp ? (
-        <SignUp toggleForm={toggleForm} />
+        <SignUpForm toggleForm={toggleForm} />
       ) : (
-        <Login toggleForm={toggleForm} />
+        <LoginForm toggleForm={toggleForm} />
       )}
     </div>
   );
