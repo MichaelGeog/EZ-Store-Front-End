@@ -1,11 +1,12 @@
+import { useContext, useState } from "react";
 import axios from "axios";
-import { useState } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm({ toggleForm }) {
-  const [credentials, setCredentials] = useState({
-    email: "",
-    password: "",
-  });
+  const { login } = useContext(AuthContext);
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -20,14 +21,13 @@ function LoginForm({ toggleForm }) {
         credentials
       );
 
-      localStorage.setItem("token", res.data.token);
-      alert(`Welcome back, ${res.data.firstName}!`);
+      // Save token + admin info in context
+      login(res.data.token, res.data);
 
-      // redirect depending on your app structure
-      window.location.href = "/dashboard";
+      // redirect directly to dashboard after login
+      navigate("/dashboard");
     } catch (err) {
-      console.error(err);
-      alert(err.response?.data?.message || "Invalid email or password");
+      alert(err.response?.data?.message || "Login failed");
     }
   };
 

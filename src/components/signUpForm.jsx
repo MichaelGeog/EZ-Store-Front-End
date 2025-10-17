@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 function SignUpForm({ toggleForm }) {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ function SignUpForm({ toggleForm }) {
     confirmPassword: "",
   });
 
+  const { login } = useContext(AuthContext); // ✅ use login function from context
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -18,14 +21,13 @@ function SignUpForm({ toggleForm }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // password confirmation
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
       return;
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/register", {
+      await axios.post("http://localhost:3000/api/auth/register", {
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
@@ -33,10 +35,9 @@ function SignUpForm({ toggleForm }) {
         password: formData.password,
       });
 
-      // save token to localStorage
-      localStorage.setItem("token", res.data.token);
+      await login(formData.email, formData.password);
+
       alert("Account created successfully!");
-      toggleForm(); // switch to login form
     } catch (err) {
       console.error(err);
       alert(err.response?.data?.message || "Error creating account");
