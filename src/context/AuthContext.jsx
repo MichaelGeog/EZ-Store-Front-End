@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
     setAdmin(null);
   }, [removeCookie]);
 
-  // Safe dependency array now
+  // Safe dependency array
   const value = useMemo(
     () => ({ admin, login, logout, loading }),
     [admin, login, logout, loading]
