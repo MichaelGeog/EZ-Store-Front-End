@@ -7,6 +7,8 @@ import {
   faWarehouse,
 } from "@fortawesome/free-solid-svg-icons";
 import "./dashboard.css";
+import { useNavigate } from "react-router-dom";
+
 function Dashboard() {
   // const { admin, logout } = useContext(AuthContext);
 
@@ -18,6 +20,8 @@ function Dashboard() {
   //   }!`;
   // }, [admin]);
 
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard">
       <div className="logo-section">
@@ -25,14 +29,16 @@ function Dashboard() {
       </div>
 
       <ul className="menu">
-        <li className="menu-item">
+        <li className="menu-item" onClick={() => navigate("/register-sale")}>
           <FontAwesomeIcon icon={faCashRegister} className="icon" />
           <span>Register Sale</span>
         </li>
+
         <li className="menu-item">
           <FontAwesomeIcon icon={faScrewdriverWrench} className="icon" />
           <span>Repair</span>
         </li>
+
         <li className="menu-item">
           <FontAwesomeIcon icon={faWarehouse} className="icon" />
           <span>Inventory</span>
