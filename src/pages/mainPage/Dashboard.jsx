@@ -39,9 +39,9 @@ function Dashboard() {
           <span>Repair</span>
         </li>
 
-        <li className="menu-item">
+        <li className="menu-item" onClick={() => navigate("/my-store")}>
           <FontAwesomeIcon icon={faWarehouse} className="icon" />
-          <span>Inventory</span>
+          <span>My Store</span>
         </li>
       </ul>
     </div>

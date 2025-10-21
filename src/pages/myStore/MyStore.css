@@ -1,0 +1,225 @@
+/* ---------------- ROOT ---------------- */
+.myStore-container {
+  padding: 2rem;
+  background-color: #f3f6fa;
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+.myStore-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.myStore-header h1 {
+  color: #0b2e56;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.home-icon2 {
+  font-size: 1.6rem;
+  color: #0b2e56;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.home-icon2:hover {
+  color: #1d4ed8;
+  transform: scale(1.1);
+}
+
+/* ---------------- TABS (Original Style Restored) ---------------- */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #d9e3f0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #0b2e56;
+  color: white;
+  font-weight: 600;
+}
+
+/* ---------------- TAB CONTENT CARD ---------------- */
+.tab-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+/* ---------------- DEVICES SECTION ---------------- */
+.devices-container h2 {
+  color: #1d3557;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+.add-device-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-device-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.add-device-form button {
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-device-form button:hover {
+  background-color: #27496d;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  color: #1d3557;
+  font-weight: 600;
+}
+
+.filter-section select {
+  padding: 8px 40px 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  color: #1d3557;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #1d3557 50%),
+    linear-gradient(135deg, #1d3557 50%, transparent 50%);
+  background-position: right 15px top 50%, right 10px top 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.filter-section select:focus {
+  border-color: #1d3557;
+  box-shadow: 0 0 5px rgba(29, 53, 87, 0.3);
+}
+
+/* Table styling */
+.devices-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: white;
+}
+
+.devices-table th,
+.devices-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.devices-table th {
+  background-color: #f1f3f5;
+  color: #1d3557;
+  font-weight: 600;
+}
+
+.devices-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d62828;
+}
+
+/* ---------------- PLACEHOLDER CARD ---------------- */
+.placeholder-card {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: #1d3557;
+  line-height: 1.6;
+}
+
+.placeholder-card strong {
+  color: #1d3557;
+}
+
+.add-device-form select {
+  padding: 10px 40px 10px 12px; /* add right padding for arrow space */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #1d3557;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* custom arrow */
+  background-image: linear-gradient(45deg, transparent 50%, #1d3557 50%),
+    linear-gradient(135deg, #1d3557 50%, transparent 50%);
+  background-position: right 15px top 50%, right 10px top 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.add-device-form select:hover {
+  border-color: #1d3557;
+}
+
+.add-device-form select:focus {
+  border-color: #1d3557;
+  box-shadow: 0 0 5px rgba(29, 53, 87, 0.3);
+}

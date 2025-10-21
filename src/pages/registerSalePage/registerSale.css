@@ -30,6 +30,7 @@ nav h2 {
   font-size: 30px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  color: white;
 }
 
 .home-icon:hover {
