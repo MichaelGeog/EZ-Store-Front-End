@@ -1,18 +1,75 @@
-# React + Vite
+# 📱 EZ Store (Front End)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EZ Store Front End is a modern React-based web application built with Vite for lightning-fast performance. It serves as the user interface for the EZ Store Repair Management System — allowing smartphone repair store owners and staff to manage sales, repairs, inventory, and customer interactions through an intuitive dashboard.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 Authentication System — Login and signup integrated with backend JWT authentication
+- 🛠️ Repair Management Dashboard — Manage device repairs, status updates, and technician tracking
+- 💰 POS (Point of Sale) — Register sales, manage checkout, and view transaction history
+- 📦 Inventory Management — View and manage devices, accessories, and spare parts
+- 👥 Customer Search — Quickly find and update customer details
+- 🧭 Responsive Navigation — Seamless page transitions using React Router
+- ⚡ Optimized Development — Vite ensures fast builds and hot module replacement
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ⚙️ Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- React 19 – Front-end library for building dynamic UIs
+- React Router DOM 7 – Handles client-side routing and navigation
+- Axios – For API calls to the backend
+- React Cookie – For managing authentication cookies
+- Font Awesome – Provides scalable vector icons for the interface
+- Vite – Fast build tool and development server
+- ESLint – Linting for consistent and clean code
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Folder Structure
+
+```
+Front End
+├─ README.md
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ fullLogo.png
+│  └─ logo.png
+├─ src
+│  ├─ App.jsx
+│  ├─ components
+│  │  ├─ loginForm.jsx
+│  │  └─ signUpForm.jsx
+│  ├─ context
+│  │  └─ AuthContext.jsx
+│  ├─ index.css
+│  ├─ main.jsx
+│  └─ pages
+│     ├─ authPage
+│     │  ├─ authPage.css
+│     │  └─ authPage.jsx
+│     ├─ mainPage
+│     │  ├─ Dashboard.jsx
+│     │  └─ dashboard.css
+│     ├─ myStore
+│     │  ├─ AccessoriesTab.jsx
+│     │  ├─ CustomersTab.jsx
+│     │  ├─ DevicesTab.jsx
+│     │  ├─ MyStore.css
+│     │  └─ MyStore.jsx
+│     └─ registerSalePage
+│        ├─ registerSale.css
+│        └─ registerSale.jsx
+└─ vite.config.js
+
+```
+
+---
+
+## 🧠 Notes
+
+- The app communicates with the EZ Store Backend API for data handling. [Backend](https://github.com/MichaelGeog/EZ-Store-Back-End)
+- Ensure the backend server is running before using API features.

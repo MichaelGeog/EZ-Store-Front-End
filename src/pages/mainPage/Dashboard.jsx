@@ -1,25 +1,9 @@
-// import { useContext, useMemo } from "react";
-// import { AuthContext } from "../../context/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCashRegister,
-  faScrewdriverWrench,
-  faWarehouse,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCashRegister, faWarehouse } from "@fortawesome/free-solid-svg-icons";
 import "./dashboard.css";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
-  // const { admin, logout } = useContext(AuthContext);
-
-  // // simulate computed data (useMemo to optimize)
-  // const welcomeMessage = useMemo(() => {
-  //   console.log("Computing welcome message...");
-  //   return `Welcome back, ${admin?.firstName || "Admin"} from ${
-  //     admin?.businessName
-  //   }!`;
-  // }, [admin]);
-
   const navigate = useNavigate();
 
   return (
@@ -34,10 +18,10 @@ function Dashboard() {
           <span>Register Sale</span>
         </li>
 
-        <li className="menu-item">
+        {/* <li className="menu-item">
           <FontAwesomeIcon icon={faScrewdriverWrench} className="icon" />
           <span>Repair</span>
-        </li>
+        </li> */}
 
         <li className="menu-item" onClick={() => navigate("/my-store")}>
           <FontAwesomeIcon icon={faWarehouse} className="icon" />
