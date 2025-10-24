@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCashRegister, faWarehouse } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCashRegister,
+  faScrewdriverWrench,
+  faWarehouse,
+} from "@fortawesome/free-solid-svg-icons";
 import "./dashboard.css";
 import { useNavigate } from "react-router-dom";
 
@@ -18,10 +22,10 @@ function Dashboard() {
           <span>Register Sale</span>
         </li>
 
-        {/* <li className="menu-item">
+        <li className="menu-item">
           <FontAwesomeIcon icon={faScrewdriverWrench} className="icon" />
           <span>Repair</span>
-        </li> */}
+        </li>
 
         <li className="menu-item" onClick={() => navigate("/my-store")}>
           <FontAwesomeIcon icon={faWarehouse} className="icon" />
