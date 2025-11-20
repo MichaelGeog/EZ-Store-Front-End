@@ -72,5 +72,6 @@ Front End
 ## 🧠 Notes
 
 - The app communicates with the EZ Store Backend API for data handling.
-- Ensure the backend server is running before using API features.
+- Ensure the backend server is running before using API features. [Backend](https://github.com/MichaelGeog/EZ-Store-Back-End)
+
 
